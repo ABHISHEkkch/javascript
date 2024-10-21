@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: azure;">
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+</body>
+<script>
+    function addlanguage(langname){
+        const li=document.createElement('li');
+        li.innerHTML=`${langname}`
+        document.querySelector('.language').appendChild(li)
+    }
+    addlanguage("python")
+    addlanguage("typescript")
+
+    function addoptimizelang(langname){
+        const li = document.createElement('li')
+        const langText =document.createTextNode(langname)
+        li.appendChild(langText)
+        document.querySelector('.language').appendChild(li)
+    }
+    addoptimizelang("java")
+
+    //Edit
+    const firstlang=document.querySelector("li:nth-child(2)")
+      console.log(firstlang);
+        //firstlang.innerHTML="mongo"
+    //replacing with another li
+    const secondlang=document.createElement('li')
+    secondlang.textContent='cpp'
+    firstlang.replaceWith(secondlang)
+
+
+    //remove
+    const lastlang = document.querySelector('li:last-child')
+    lastlang.remove()
+
+        
+
+</script>
+</html>
